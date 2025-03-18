@@ -4,7 +4,7 @@ from aiogram import Bot
 from dotenv import load_dotenv
 
 # Загрузка переменных окружения
-load_dotenv(dotenv_path=os.path.join(os.pardir, '.env'))
+load_dotenv(dotenv_path="./.env")
 
 # Инициализация бота
 bot = Bot(token=os.getenv('TG_TOKEN'))
@@ -32,7 +32,7 @@ async def main():
     ]
 
     # Текст сообщения
-    message_text = '''Бот работает, можно оставлять заявки)'''
+    message_text = '''Бот работает до утра, можно записываться'''
 
     # Отправка текстовых сообщений
     for user_id in user_ids:

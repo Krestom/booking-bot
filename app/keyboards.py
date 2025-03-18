@@ -31,7 +31,7 @@ async def time_keyboard():
 async def classes_builder():
     classes = ["0207", "0209", "0210", "0211", "0212", "0213", "0214", "0215", "0216",
                "0218", "0219", "0220", "0221", "0222", "0223", "0224", "0225",
-               "0226", "0227", "0229", "0230", "0231", "0232", "0233"]
+               "0226", "0227", "0228", "0229", "0230", "0231", "0232", "0233"]
     keyboard = InlineKeyboardBuilder()
     for cl in classes:
         keyboard.add(InlineKeyboardButton(text=cl, callback_data=f'class_{cl}'))
