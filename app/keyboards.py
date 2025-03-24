@@ -22,16 +22,16 @@ async def duration_keyboard():
 # --- Клавиатура выбора времени ---
 async def time_keyboard():
     keyboard = InlineKeyboardBuilder()
-    for hour in range(11, 24):  # От 7:00 до 23:00
+    for hour in range(7, 24):  # От 7:00 до 23:00
         keyboard.add(InlineKeyboardButton(text=f"{hour}:00", callback_data=f"time_{hour}:00"))
     keyboard.row(InlineKeyboardButton(text='Назад', callback_data='go_back_duration'))
     return keyboard.as_markup()
 
 # --- Клавиатура выбора класса ---
 async def classes_builder():
-    classes = ["0207", "0209", "0210", "0211", "0212", "0213", "0214", "0215", "0216",
-               "0218", "0219", "0220", "0221", "0222", "0223", "0224", "0225",
-               "0226", "0227", "0228", "0229", "0230", "0231", "0232", "0233"]
+    classes = ["0207", "0209", "0210", "0211",
+               "0212", "0213", "0214", "0215", "0216",
+               "0219", "0220", "0226", "0228"]
     keyboard = InlineKeyboardBuilder()
     for cl in classes:
         keyboard.add(InlineKeyboardButton(text=cl, callback_data=f'class_{cl}'))
